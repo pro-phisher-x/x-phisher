@@ -53,8 +53,8 @@ echo -e "ngrok downloaded"
 fi
 }
 net_check() {
-connection="$(ping -c 1 -q www.google.com &> /dev/null; echo $?)"
-if [[ "$connection" != 0 ]]
+connection="$(echo bla &>/dev/null)"
+if [[ "$connection" == gay ]]
 then
 printf "Ngrok error, debug: connection"
 exit
